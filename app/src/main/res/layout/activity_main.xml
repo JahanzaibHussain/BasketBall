@@ -3,8 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/holo_red_light"
-
+    android:background="@drawable/basketball"
     tools:context="com.jahanzaib.basketball.MainActivity"
 
     >
@@ -26,6 +25,7 @@
             android:text="Team A"
             android:textAlignment="center"
             android:textSize="30sp"
+            android:textColor="#ffffff"
             />
         <TextView
             android:id="@+id/teamAresult"
@@ -35,39 +35,49 @@
             android:textAlignment="center"
             android:textSize="50sp"
             android:layout_marginTop="20dp"
+            android:textColor="#ffffff"
             />
         <Button
             android:id="@+id/teamAplus3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="+3 Points"
+            android:textColor="#ffffff"
+            android:textSize="25sp"
+            android:textStyle="italic"
             android:layout_marginTop="10dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            android:background="@android:color/holo_orange_dark"
+            android:background="#EF6C00"
             android:onClick="plus3"
             />
         <Button
             android:id="@+id/teamAplus2"
             android:layout_width="match_parent"
+            android:textColor="#ffffff"
+            android:textSize="25sp"
+            android:textStyle="italic"
             android:layout_height="wrap_content"
             android:text="+2 Points"
             android:layout_marginTop="10dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:background="@android:color/holo_orange_dark"
-
+            android:onClick="plus2"
             />
         <Button
             android:id="@+id/teamAfreethrow"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:textSize="25sp"
+            android:textStyle="italic"
             android:text="Free throw"
             android:layout_marginTop="10dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:background="@android:color/holo_orange_dark"
-
+            android:onClick="freethrow"
             />
 
     </LinearLayout>
@@ -91,6 +101,7 @@
             android:text="Team B"
             android:textAlignment="center"
             android:textSize="30sp"
+            android:textColor="#ffffff"
             />
         <TextView
             android:id="@+id/teamBresult"
@@ -100,8 +111,12 @@
             android:textAlignment="center"
             android:textSize="50sp"
             android:layout_marginTop="20dp"
+            android:textColor="#ffffff"
             />
         <Button
+            android:textColor="#ffffff"
+            android:textSize="25sp"
+            android:textStyle="italic"
             android:id="@+id/teamBplus3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -109,30 +124,35 @@
             android:layout_marginTop="10dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            android:background="@android:color/holo_orange_dark"
-
+            android:background="#EF6C00"
+            android:onClick="plus3B"
             />
         <Button
             android:id="@+id/teamBplus2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="+2 Points"
-            android:layout_marginTop="10dp"
+            android:textColor="#ffffff"
+            android:textSize="25sp"
+            android:textStyle="italic"    android:layout_marginTop="10dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:background="@android:color/holo_orange_dark"
-
+            android:onClick="plus2B"
             />
         <Button
             android:id="@+id/teamBfreethrow"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:textSize="25sp"
+            android:textStyle="italic"
             android:text="Free throw"
             android:layout_marginTop="10dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:background="@android:color/holo_orange_dark"
-
+            android:onClick="freethrowB"
             />
 
     </LinearLayout>
@@ -147,6 +167,7 @@
         android:layout_centerHorizontal="true"
         android:background="@android:color/holo_orange_dark"
         android:onClick="resetAll"
+        android:layout_marginBottom="20dp"
         />
 
 </RelativeLayout>

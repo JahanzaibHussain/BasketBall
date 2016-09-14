@@ -1,5 +1,6 @@
 package com.jahanzaib.basketball;
 
+import android.support.annotation.StringDef;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -11,17 +12,49 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        displayteamA(0);
+        displayteamB(0);
     }
 
-    public void resetAll(View view) {
-        int resultA = 0;
-        int resultB = 0;
-        display(1);
+    int scoreA ;
+    int scoreB ;
+
+    public void displayteamA(int score){
+        TextView scoreView = (TextView) findViewById(R.id.teamAresult);
+        scoreView.setText(String.valueOf(score));
+    }
+    public void displayteamB(int score){
+        TextView scoreView = (TextView) findViewById(R.id.teamBresult);
+        scoreView.setText(String.valueOf(score));
     }
 
-    protected void display(int num) {
-        TextView result = (TextView) findViewById(R.id.resetall);
-        result.setText(num);
+    public void plus3(View view){
+        scoreA = scoreA + 3;
+        displayteamA(scoreA);
+    }
+    protected void plus3B(View view){
+        scoreB = scoreB + 3;
+        displayteamB(scoreB);
+    }
+    public void plus2(View view){
+        scoreA = scoreA + 2;
+        displayteamA(scoreA);
+    }
+    protected void plus2B(View view){
+        scoreB = scoreB + 2;
+        displayteamB(scoreB);
+    }
+    public void freethrow(View view){
+        scoreA = scoreA + 1;
+        displayteamA(scoreA);
+    }
+    protected void freethrowB(View view){
+        scoreB = scoreB + 1;
+        displayteamB(scoreB);
     }
 
+    public void resetAll(View view){
+        displayteamA(scoreA = 0);
+        displayteamB(scoreB = 0);
+    }
 }
